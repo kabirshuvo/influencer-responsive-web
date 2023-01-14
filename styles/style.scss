@@ -4,29 +4,145 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-//   overflow: hidden;
+  //   overflow: hidden;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
-nav{
+nav {
+  display: flex;
+  justify-content: space-around;
+
+  ul {
     display: flex;
-    justify-content: space-around;
-
-    ul{
-        display: flex;
-        li{
-            padding-right:20px;
-            list-style-type: none;
-            a{
-                text-decoration: none;
-            }
-        }
+    li {
+      padding-right: 20px;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+      }
     }
-
+  }
 }
 
-@media screen and (max-width: 768px) {
+.container {
+  margin: 0 auto;
+  max-width: 1040px;
+}
+// hero section style starts from here
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Hero sec Ends here
+// Logo section Starts from Here
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 20px;
+}
+// Logo Section Ends Here
+// Popular-Collection-Section Style starts from here
+.popular-collection-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
+}
+// popular-collection-container style Ends Here
+// Featured Product Section Styles Starts from here
+.featured-product-container {
+  display: flex;
+  padding: 50px;
+  gap: 50px;
+}
+// Featured Product Section Styles Ends here
+// Footer Section Starts from here
+footer {
+  background-color: rgb(27, 26, 26);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 50px;
+  h2 {
+    padding: 10px;
+  }
+  p {
+    padding: 5px;
+  }
+  .social {
+    i {
+      padding: 5px;
+    }
+  }
+}
+@media screen and (max-width: 414px) {
+  .container {
+    max-width: 414px;
+  }
+  .hero-container {
+    flex-direction: column-reverse;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      padding: 5px 10px 5px 10px;
+      text-align: center;
+    }
+    button {
+      padding: 10px;
+    }
+  }
+  .hero-image {
+    flex-wrap: wrap;
+  }
+  .logo-container {
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 60px;
+    }
+  }
+  .popular-collection-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    h3 {
+      padding-bottom: 10px;
+    }
+    .popular-collection-container {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      padding: 10px;
+    }
+  }
+  .featured-product-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h2 {
+      padding: 5px;
+    }
+    p {
+      text-align: justify;
+      padding-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+    }
+  }
 }
