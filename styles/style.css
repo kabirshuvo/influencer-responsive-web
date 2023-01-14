@@ -25,6 +25,10 @@ nav ul li a {
   text-decoration: none;
 }
 
+.mobile-navbar {
+  display: none;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1040px;
@@ -77,6 +81,15 @@ footer .social i {
 @media screen and (max-width: 414px) {
   .container {
     max-width: 414px;
+  }
+  nav {
+    display: none;
+  }
+  .mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
   }
   .hero-container {
     flex-direction: column-reverse;

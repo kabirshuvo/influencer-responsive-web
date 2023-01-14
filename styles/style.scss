@@ -26,6 +26,9 @@ nav {
     }
   }
 }
+.mobile-navbar {
+  display: none;
+}
 
 .container {
   margin: 0 auto;
@@ -84,6 +87,15 @@ footer {
 @media screen and (max-width: 414px) {
   .container {
     max-width: 414px;
+  }
+  nav {
+    display: none;
+  }
+  .mobile-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
   }
   .hero-container {
     flex-direction: column-reverse;
